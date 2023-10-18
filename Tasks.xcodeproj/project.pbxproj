@@ -17,7 +17,6 @@
 		BCCB7FDF2ADA7ADB007DC83B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BCCB7FDE2ADA7ADB007DC83B /* FirebaseAuth */; };
 		BCCB7FE12ADA7ADB007DC83B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BCCB7FE02ADA7ADB007DC83B /* FirebaseFirestore */; };
 		BCCB7FE32ADA7ADB007DC83B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BCCB7FE22ADA7ADB007DC83B /* FirebaseFirestoreSwift */; };
-		BCCB7FE52ADA7D2F007DC83B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCCB7FE42ADA7D2F007DC83B /* GoogleService-Info.plist */; };
 		BCCB7FF12ADB4284007DC83B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB7FF02ADB4284007DC83B /* LoginView.swift */; };
 		BCCB7FF32ADB428A007DC83B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB7FF22ADB428A007DC83B /* RegisterView.swift */; };
 		BCCB7FF72ADB4304007DC83B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB7FF62ADB4304007DC83B /* User.swift */; };
@@ -93,7 +92,6 @@
 		BCCB7FCA2ADA7977007DC83B /* TasksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCB7FCE2ADA7977007DC83B /* TasksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksUITests.swift; sourceTree = "<group>"; };
 		BCCB7FD02ADA7977007DC83B /* TasksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BCCB7FE42ADA7D2F007DC83B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCCB7FF02ADB4284007DC83B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BCCB7FF22ADB428A007DC83B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		BCCB7FF62ADB4304007DC83B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 				BCCB800A2ADE5390007DC83B /* Lusitana */,
 				BCCB7FB72ADA7977007DC83B /* Assets.xcassets */,
 				BCCB7FB32ADA7976007DC83B /* TasksApp.swift */,
-				BCCB7FE42ADA7D2F007DC83B /* GoogleService-Info.plist */,
 				BCCB80082ADCD96F007DC83B /* landmarkData.json */,
 			);
 			path = Other;
@@ -492,7 +489,6 @@
 				BCCB80312ADF0AF8007DC83B /* Poppins-Regular.ttf in Resources */,
 				BCCB807B2ADFB9E2007DC83B /* AlbertSans-BlackItalic.ttf in Resources */,
 				BCCB80802ADFB9E2007DC83B /* AlbertSans-SemiBold.ttf in Resources */,
-				BCCB7FE52ADA7D2F007DC83B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
