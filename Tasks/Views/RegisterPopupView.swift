@@ -6,44 +6,26 @@
 //
 
 import SwiftUI
-//import _AuthenticationServices_SwiftUI
-//SignInWithAppleButton(
-//    onRequest: { request in
-//        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
-//    },
-//    onCompletion: { result in
-//        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
-//    }
-//)
 
 struct RegisterPopupView: View {
-//    @Binding var showingPopup: Bool;
+    @StateObject var vm = RegisterPopupViewViewModel()
     
-    @State var titleFontTypeBold = "Lusitana-Bold"
-    @State var titleFontTypeRegular = "Lusitana-Regular"
-    @State var bodyFontType = "Poppins-Medium"
+    let animationDuration: Double = 0.4
+    let dampingFraction: Double = 0.7
+    let blendDuration: Double = 0.0
     
-    @State var titleFontSize: CGFloat = 38
-    @State var subtitleFontSize: CGFloat = 20
-    @State var bodyFontSize: CGFloat = 18
-    
-    @State var firstName = ""
-    @State var lastName = ""
-    @State var email = ""
-    @State var password = ""
-    
-    @State private var scale: CGFloat = 0.7  // Initial scale
-    @State private var yOffset: CGFloat = 60.0
-    @State private var opacity: CGFloat = 0.3
+    let viewWidth: CGFloat = UIScreen.main.bounds.width * 0.91
+    let viewHeight: CGFloat = UIScreen.main.bounds.height * 0.45
     
     var body: some View {
         VStack {
             
+            /// Title, subtitle, and logo
             HStack {
                 VStack(alignment: .leading) {
                     HStack {
                         Text("Register")
-                            .font(.custom(titleFontTypeBold, size: titleFontSize))
+                            .font(.custom(Constants.FontType.titleFontTypeBold, size: Constants.FontSize.popupTitleFontSize))
                         Spacer()
                         Image("Loops Logo")
                             .resizable()
@@ -52,58 +34,47 @@ struct RegisterPopupView: View {
                     }
                         
                     Text("Create a new account.")
-                        .font(.custom("Lusitana-Bold", size: 20))
+                        .font(.custom(Constants.FontType.titleFontTypeBold, size: Constants.FontSize.subtitleFontSize))
                         .fontWeight(.regular)
                         .offset(y: -10.0)
                 }
                 Spacer()
             }
             
-            
             Spacer()
 
+            /// Text fields for user input
             Group {
-                TextField("First Name", text: $firstName)
-                TextField("Last Name", text: $lastName)
-                TextField("Email Address", text: $email)
+                TextField("Name", text: $vm.name)
+                TextField("Email Address", text: $vm.email)
                     .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                SecureField("Password", text: $password)
+                SecureField("Password", text: $vm.password)
                     .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
             }
-            .font(.custom(bodyFontType, size: bodyFontSize))
-            .fontWeight(.bold)
+            .font(.custom(Constants.FontType.bodyFontType, size: Constants.FontSize.bodyFontSize))
             .padding(.bottom)
             
             Spacer()
             
-            Button(action: {
-                // Handle Register
-            }, label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 6)
-                        .foregroundColor(Color.cyan)
-                        .shadow(color: .gray, radius: 1, x: 0, y: 1)
-                    Text("Register").bold()
-                        .foregroundColor(Color.white)
-                        .font(.custom(bodyFontType, size: bodyFontSize))
-                        .fontWeight(.regular)
-                }
-            })
-            .frame(height: 36.0)
+            /// Register Button
+            Button("Register") {
+                vm.register()
+            }
+            .buttonStyle(LoginButtonStyle(containerWidth: viewWidth))
         }
         .padding(.all, 14)
-        .frame(width: UIScreen.main.bounds.width * 0.91, height: UIScreen.main.bounds.height * 0.45)
+        .frame(width: viewWidth, height: viewHeight)
         .background(Color.white)
         .cornerRadius(6)
         .shadow(radius: 5, x: 0, y: 3)
-        .offset(y: yOffset)
-//        .scaleEffect(scale)  // Apply scale effect
-        .opacity(opacity)
+        .offset(y: vm.viewYOffset)
+//        .scaleEffect(vm.viewScale)
+        .opacity(vm.viewOpacity)
         .onAppear {
-            withAnimation(.spring(response: 0.4, dampingFraction: 0.5, blendDuration: 0)) {
-//                scale = 1.0  // Final scale
-                yOffset = 0
-                opacity = 1.0
+            withAnimation(.spring(response: animationDuration, dampingFraction: dampingFraction, blendDuration: blendDuration)) {
+//                vm.viewScale = 1.0
+                vm.viewYOffset = 0
+                vm.viewOpacity = 1.0
             }
         }
     }
@@ -112,12 +83,4 @@ struct RegisterPopupView: View {
 #Preview {
     RegisterPopupView()
 }
-
-//struct PopupView_Previews: PreviewProvider {
-//    @State static private var showingPopup = true  // Create a @State property
-//
-//    static var previews: some View {
-//        RegisterPopupView(showingPopup: $showingPopup)  // Pass a binding to showingPopup
-//    }
-//}
 

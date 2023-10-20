@@ -8,38 +8,16 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject var viewModel = LoginViewViewModel()
+    @StateObject var vm = LoginViewViewModel()
     
-    @State var titleFontTypeBold = "Lusitana-Bold"
-    @State var titleFontTypeRegular = "Lusitana-Regular"
-    @State var bodyFontType = "Poppins-Medium"
+    let animationDuration: Double = 0.5
+    let dampingFraction: Double = 0.5
+    let blendDuration: Double = 0.0
     
-    @State var titleFontSize: CGFloat = 54
-    @State var subtitleFontSize: CGFloat = 20
-    @State var bodyFontSize: CGFloat = 18
+    let finalOpacity: Double = 1.0
+    let finalOffset: CGFloat = 0
     
-    @State var animationDuration: Double = 0.5
-    @State var dampingFraction: Double = 0.5
-    @State var blendDuration: Double = 0.0
-    
-    @State var titleOpacity: Double = 0.0
-    @State var titleYOffset: CGFloat = 80
-    
-    @State var fieldsOpacity: Double = 0.0
-    @State var fieldsYOffset: CGFloat = 60
-    
-    @State var footerOpacity: Double = 0.0
-    @State var footerYOffset: CGFloat = 40
-    
-    @State var errorMsgYOffset: CGFloat = -20.0
-    @State var errorMsgAnimDuration: Double = 0.3
-    
-    @State var finalOpacity: Double = 1.0
-    @State var finalOffset: CGFloat = 0
-    
-    @State var squareImageDim: CGFloat = 60
-    
-    @State var showingPopup = false
+    let squareImageDim: CGFloat = 60
     
     var body: some View {
         NavigationView {
@@ -50,20 +28,20 @@ struct LoginView: View {
                     HStack {
                         VStack(alignment: .leading, content: {
                             Text("Loops")
-                                .font(.custom(titleFontTypeBold, size: titleFontSize))
+                                .font(.custom(Constants.FontType.titleFontTypeBold, size: Constants.FontSize.titleFontSize))
                             Text("Keep track of everything.")
-                                .font(.custom(titleFontTypeBold, size: subtitleFontSize))
+                                .font(.custom(Constants.FontType.titleFontTypeBold, size: Constants.FontSize.subtitleFontSize))
                                 .fontWeight(.regular)
                         })
                         Spacer()
                     }
                     .padding([.top, .horizontal]) // Apply padding
-                    .opacity(titleOpacity)  // Apply initial opacity
-                    .offset(y: titleYOffset)  // Apply initial horizontal offset
+                    .opacity(vm.titleOpacity)
+                    .offset(y: vm.titleYOffset)
                     .onAppear {
                         withAnimation(.spring(response: animationDuration, dampingFraction: dampingFraction, blendDuration: blendDuration)) {
-                            titleOpacity = finalOpacity
-                            titleYOffset = finalOffset
+                            vm.titleOpacity = finalOpacity
+                            vm.titleYOffset = finalOffset
                         }
                     }
                     
@@ -72,36 +50,34 @@ struct LoginView: View {
                     // Email and PW fields and Login button
                     VStack {
                         Group {
-                            TextField("Email Address", text: $viewModel.email)
+                            TextField("Email Address", text: $vm.email)
                                 .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                                 .padding()
                             
-                            SecureField("Password", text: $viewModel.password)
+                            SecureField("Password", text: $vm.password)
                                 .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                                 .padding([.bottom, .horizontal])
                             
-                            Button(action: { viewModel.login() }) {
-                                Text("Login").bold()
+                            Button("Login") {
+                                vm.login()
                             }
-                            .frame(width: UIScreen.main.bounds.width * 0.91, height: 36.0)
-                            .buttonStyle(CustomButtonStyle())
-                            .padding([.bottom, .horizontal])
+                            .buttonStyle(LoginButtonStyle())
                             
-                            Text(viewModel.errorMessage)
+                            Text(vm.errorMessage)
                                 .frame(height: 20)  // Reserve space
                                 .foregroundColor(.red)
-                                .opacity(viewModel.errorMessage.isEmpty ? 0 : 1)
-                                .offset(y: viewModel.errorMessage.isEmpty ? errorMsgYOffset : 0)
-                                .animation(.easeInOut(duration: errorMsgAnimDuration), value: viewModel.errorMessage)
+                                .opacity(vm.errorMessage.isEmpty ? 0 : 1)
+                                .offset(y: vm.errorMessage.isEmpty ? vm.errorMsgYOffset : 0)
+                                .animation(.easeInOut(duration: vm.errorMsgAnimDuration), value: vm.errorMessage)
                         }
-                        .font(.custom(bodyFontType, size: bodyFontSize))
+                        .font(.custom(Constants.FontType.bodyFontType, size: Constants.FontSize.bodyFontSize))
                     }
-                    .opacity(fieldsOpacity)  // Apply opacity
-                    .offset(y: fieldsYOffset)  // Apply horizontal offset
+                    .opacity(vm.fieldsOpacity)
+                    .offset(y: vm.fieldsYOffset)
                     .onAppear {
                         withAnimation(.spring(response: animationDuration, dampingFraction: dampingFraction, blendDuration: blendDuration)) {
-                            fieldsOpacity = finalOpacity
-                            fieldsYOffset = finalOffset
+                            vm.fieldsOpacity = finalOpacity
+                            vm.fieldsYOffset = finalOffset
                         }
                     }
                     
@@ -117,50 +93,37 @@ struct LoginView: View {
                         HStack {
                             Text("First time?")
                             Button(action: {
-                                showingPopup = true
+                                vm.showingPopup = true
                             }) {
                                 Text("Create an account")
                             }.foregroundColor(.cyan)
                         }
-                        .font(.custom(titleFontTypeBold, size: bodyFontSize))
+                        .font(.custom(Constants.FontType.titleFontTypeBold, size: Constants.FontSize.bodyFontSize))
                         .fontWeight(.regular)
                     }
-                    .opacity(footerOpacity)  // Apply opacity
-                    .offset(y: footerYOffset)  // Apply horizontal offset
+                    .opacity(vm.footerOpacity)
+                    .offset(y: vm.footerYOffset)
                     .onAppear {
                         withAnimation(.spring(response: animationDuration, dampingFraction: dampingFraction, blendDuration: blendDuration)) {
-                            footerOpacity = finalOpacity
-                            footerYOffset = finalOffset
+                            vm.footerOpacity = finalOpacity
+                            vm.footerYOffset = finalOffset
                         }
                     }
                 }
                 
-                // Tap to dismiss
-                if showingPopup {
+                // Tap outside popup to dismiss
+                if vm.showingPopup {
                     Color.black.opacity(0.4)
                         .edgesIgnoringSafeArea(.all)
                         .onTapGesture {
-                            showingPopup = false
+                            vm.showingPopup = false
                         }
                 }
                 
-                if showingPopup {
+                if vm.showingPopup {
                     RegisterPopupView()
                 }
             }
-        }
-    }
-}
-
-struct CustomButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 6)
-                .foregroundColor(configuration.isPressed ? Color.black : Color.cyan)
-                .shadow(color: .gray, radius: 1, x: 0, y: 1)
-            configuration.label
-                .foregroundColor(Color.white)
-                .font(.custom("Poppins-Medium", size: 18))
         }
     }
 }

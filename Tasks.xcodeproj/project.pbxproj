@@ -62,6 +62,21 @@
 		BCCB80892ADFB9E2007DC83B /* AlbertSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCB80772ADFB9E2007DC83B /* AlbertSans-ExtraLight.ttf */; };
 		BCCB808A2ADFB9E2007DC83B /* AlbertSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCB80782ADFB9E2007DC83B /* AlbertSans-BoldItalic.ttf */; };
 		BCCB808B2ADFB9E2007DC83B /* AlbertSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCB80792ADFB9E2007DC83B /* AlbertSans-SemiBoldItalic.ttf */; };
+		BCCB808E2AE08740007DC83B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCCB808D2AE0873F007DC83B /* GoogleService-Info.plist */; };
+		BCCB80902AE0B0A4007DC83B /* RegisterPopupViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB808F2AE0B0A4007DC83B /* RegisterPopupViewViewModel.swift */; };
+		BCCB80922AE0EEDB007DC83B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB80912AE0EEDB007DC83B /* Extensions.swift */; };
+		BCCB80952AE0F708007DC83B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB80942AE0F708007DC83B /* Constants.swift */; };
+		BCCB80972AE0F90D007DC83B /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB80962AE0F90D007DC83B /* MainViewViewModel.swift */; };
+		BCCB80992AE0FAC6007DC83B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB80982AE0FAC6007DC83B /* HomeView.swift */; };
+		BCCB809C2AE10217007DC83B /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB809B2AE10217007DC83B /* TabButton.swift */; };
+		BCCB809E2AE10308007DC83B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB809D2AE10308007DC83B /* TabBar.swift */; };
+		BCCB80A02AE1DF1A007DC83B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB809F2AE1DF1A007DC83B /* SettingsView.swift */; };
+		BCCB80A22AE23B29007DC83B /* HomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB80A12AE23B28007DC83B /* HomeViewViewModel.swift */; };
+		BCCB80A52AE24C42007DC83B /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB80A42AE24C42007DC83B /* ButtonStyles.swift */; };
+		BCCB80A72AE25356007DC83B /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB80A62AE25356007DC83B /* TabBarViewModel.swift */; };
+		BCCB80A92AE259B5007DC83B /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB80A82AE259B5007DC83B /* NewItemView.swift */; };
+		BCCB80AB2AE259FA007DC83B /* NewItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB80AA2AE259FA007DC83B /* NewItemViewViewModel.swift */; };
+		BCCB80AD2AE26150007DC83B /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB80AC2AE26150007DC83B /* CustomDatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +154,21 @@
 		BCCB80782ADFB9E2007DC83B /* AlbertSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlbertSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		BCCB80792ADFB9E2007DC83B /* AlbertSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlbertSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		BCCB808C2ADFBA0A007DC83B /* AlbertSans-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlbertSans-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		BCCB808D2AE0873F007DC83B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCCB808F2AE0B0A4007DC83B /* RegisterPopupViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPopupViewViewModel.swift; sourceTree = "<group>"; };
+		BCCB80912AE0EEDB007DC83B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BCCB80942AE0F708007DC83B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BCCB80962AE0F90D007DC83B /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
+		BCCB80982AE0FAC6007DC83B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BCCB809B2AE10217007DC83B /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		BCCB809D2AE10308007DC83B /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		BCCB809F2AE1DF1A007DC83B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BCCB80A12AE23B28007DC83B /* HomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewViewModel.swift; sourceTree = "<group>"; };
+		BCCB80A42AE24C42007DC83B /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		BCCB80A62AE25356007DC83B /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		BCCB80A82AE259B5007DC83B /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
+		BCCB80AA2AE259FA007DC83B /* NewItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewViewModel.swift; sourceTree = "<group>"; };
+		BCCB80AC2AE26150007DC83B /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,10 +260,15 @@
 		BCCB7FE62ADB4123007DC83B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCCB80A32AE24C34007DC83B /* Utils */,
+				BCCB809A2AE1020B007DC83B /* Components */,
 				BCCB7FB52ADA7976007DC83B /* MainView.swift */,
 				BCCB7FF02ADB4284007DC83B /* LoginView.swift */,
 				BCCB7FF22ADB428A007DC83B /* RegisterView.swift */,
 				BCCB803B2ADFAF7B007DC83B /* RegisterPopupView.swift */,
+				BCCB80982AE0FAC6007DC83B /* HomeView.swift */,
+				BCCB809F2AE1DF1A007DC83B /* SettingsView.swift */,
+				BCCB80A82AE259B5007DC83B /* NewItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +277,11 @@
 			isa = PBXGroup;
 			children = (
 				BCCB80392ADF1C00007DC83B /* LoginViewViewModel.swift */,
+				BCCB808F2AE0B0A4007DC83B /* RegisterPopupViewViewModel.swift */,
+				BCCB80962AE0F90D007DC83B /* MainViewViewModel.swift */,
+				BCCB80A12AE23B28007DC83B /* HomeViewViewModel.swift */,
+				BCCB80A62AE25356007DC83B /* TabBarViewModel.swift */,
+				BCCB80AA2AE259FA007DC83B /* NewItemViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -258,9 +298,8 @@
 		BCCB7FE92ADB4185007DC83B /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				BCCB803D2ADFB89E007DC83B /* Albert Sans */,
-				BCCB80122ADF0AF8007DC83B /* Poppins */,
-				BCCB800A2ADE5390007DC83B /* Lusitana */,
+				BCCB80932AE0F6E6007DC83B /* Fonts */,
+				BCCB808D2AE0873F007DC83B /* GoogleService-Info.plist */,
 				BCCB7FB72ADA7977007DC83B /* Assets.xcassets */,
 				BCCB7FB32ADA7976007DC83B /* TasksApp.swift */,
 				BCCB80082ADCD96F007DC83B /* landmarkData.json */,
@@ -334,6 +373,36 @@
 				BCCB80792ADFB9E2007DC83B /* AlbertSans-SemiBoldItalic.ttf */,
 			);
 			path = static;
+			sourceTree = "<group>";
+		};
+		BCCB80932AE0F6E6007DC83B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB803D2ADFB89E007DC83B /* Albert Sans */,
+				BCCB80122ADF0AF8007DC83B /* Poppins */,
+				BCCB800A2ADE5390007DC83B /* Lusitana */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BCCB809A2AE1020B007DC83B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB809B2AE10217007DC83B /* TabButton.swift */,
+				BCCB809D2AE10308007DC83B /* TabBar.swift */,
+				BCCB80AC2AE26150007DC83B /* CustomDatePicker.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BCCB80A32AE24C34007DC83B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB80912AE0EEDB007DC83B /* Extensions.swift */,
+				BCCB80942AE0F708007DC83B /* Constants.swift */,
+				BCCB80A42AE24C42007DC83B /* ButtonStyles.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,6 +558,7 @@
 				BCCB80312ADF0AF8007DC83B /* Poppins-Regular.ttf in Resources */,
 				BCCB807B2ADFB9E2007DC83B /* AlbertSans-BlackItalic.ttf in Resources */,
 				BCCB80802ADFB9E2007DC83B /* AlbertSans-SemiBold.ttf in Resources */,
+				BCCB808E2AE08740007DC83B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,13 +584,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCCB7FF12ADB4284007DC83B /* LoginView.swift in Sources */,
+				BCCB80952AE0F708007DC83B /* Constants.swift in Sources */,
+				BCCB80AD2AE26150007DC83B /* CustomDatePicker.swift in Sources */,
+				BCCB80992AE0FAC6007DC83B /* HomeView.swift in Sources */,
+				BCCB80972AE0F90D007DC83B /* MainViewViewModel.swift in Sources */,
+				BCCB80A92AE259B5007DC83B /* NewItemView.swift in Sources */,
 				BCCB803A2ADF1C00007DC83B /* LoginViewViewModel.swift in Sources */,
+				BCCB80AB2AE259FA007DC83B /* NewItemViewViewModel.swift in Sources */,
 				BCCB7FF92ADB4314007DC83B /* TaskItem.swift in Sources */,
 				BCCB7FB62ADA7976007DC83B /* MainView.swift in Sources */,
+				BCCB80902AE0B0A4007DC83B /* RegisterPopupViewViewModel.swift in Sources */,
+				BCCB80922AE0EEDB007DC83B /* Extensions.swift in Sources */,
+				BCCB80A02AE1DF1A007DC83B /* SettingsView.swift in Sources */,
+				BCCB809E2AE10308007DC83B /* TabBar.swift in Sources */,
+				BCCB80A22AE23B29007DC83B /* HomeViewViewModel.swift in Sources */,
 				BCCB7FF32ADB428A007DC83B /* RegisterView.swift in Sources */,
+				BCCB80A72AE25356007DC83B /* TabBarViewModel.swift in Sources */,
+				BCCB80A52AE24C42007DC83B /* ButtonStyles.swift in Sources */,
 				BCCB7FF72ADB4304007DC83B /* User.swift in Sources */,
 				BCCB803C2ADFAF7B007DC83B /* RegisterPopupView.swift in Sources */,
 				BCCB7FB42ADA7976007DC83B /* TasksApp.swift in Sources */,
+				BCCB809C2AE10217007DC83B /* TabButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
